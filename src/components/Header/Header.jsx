@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import style from './header.module.css'
 
 function Header(){
@@ -10,10 +11,10 @@ function Header(){
             </div>
             <div className= {`${style.menus} m-4`}>
                 <ul>
-                    <li>About</li>
-                    <li>Notes</li>
-                    <li>Account</li>
-                    <li>Login</li>
+                    <li><Link to='/home'>About</Link></li>
+                    <li> <Link to='/notes'>Notes</Link></li>
+                    <li> <Link to='/register'>Account</Link></li>
+                    <li> <Link to='/signIn'>Login</Link></li>
                 </ul>
             </div>
         </div>
