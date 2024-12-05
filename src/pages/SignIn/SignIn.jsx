@@ -1,6 +1,6 @@
-function Home(){
+function SignIn(){
 
-    return <h1>SignIn</h1>
+    return <h1>Register</h1>
 }
 
-export default Home
+export default SignIn

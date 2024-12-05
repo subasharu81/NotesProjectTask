@@ -1,0 +1,25 @@
+.formBtn{
+    padding-left:100px;
+    padding-top:50px;
+
+   
+}
+
+.modalDesign{
+    padding: 100px;
+    height: 700px;
+    width: 80%;
+}
+.addBtn{
+    color:white;
+    background-color: green;
+    
+}
+.cancel{
+    color:white;
+    background-color: red;
+}
+
+.textarea{
+    
+}

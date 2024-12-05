@@ -6,14 +6,38 @@ import Home from './pages/Home/Home';
 import Header from './components/Header/Header';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './index.css'
+import Notes from './pages/Notes/Notes';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import SignIn from './pages/SignIn/SignIn';
+import Signup from './pages/Singup/Singup';
 
 
 
 
 function Index(){
   return <div >
-      <Header/>
-      <Home />
+    <BrowserRouter>
+    <Header/>
+      <Routes>
+          <Route 
+              index element={<Home/>}
+           />  
+          <Route 
+            path='signIn' element={<SignIn/>}
+          />
+          <Route 
+            path='register' element={<Signup />}
+          />
+          <Route 
+            path='home' element={<Home />}
+          />
+          <Route 
+            path='notes' element={ <Notes/>}
+          />
+      </Routes>
+    </BrowserRouter>
+      
+      
   </div>
 }
 
