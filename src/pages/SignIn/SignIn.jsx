@@ -1,4 +1,5 @@
 import { Box, Typography } from "@mui/material"
+import styles from './signIn.module.css'
 
 function SignIn(){
 
@@ -28,7 +29,21 @@ function SignIn(){
         <div style={{ height: '300px', padding: '10px' }}>
             <Typography  variant="h5" sx={{textAlign:'center', color: 'brown'}}> Sign In </Typography>
 
-            
+            <form>
+                <div className="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="email" className="form-control" id="exampleInputEmail1" placeholder=" Email" />
+                    
+                </div>
+                <div className="form-group">
+                    <label for="exampleInputEmail1">Email address</label>
+                    <input type="password" className="form-control" id="passwordInputEmail1"  placeholder="Password" />
+                </div>
+                <div classNameName="form-group" style={{position:'relative',top:'30px',left:'200px'}}>
+                    <button type="submit" className={`btn ${styles.btnbrown}`}>Login</button>
+                    <button type="submit"  className={`btn ${styles.lightBlue}`}>Register</button>
+                </div>
+            </form>
         </div>
 
 

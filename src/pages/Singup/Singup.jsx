@@ -1,5 +1,6 @@
 import { Box, Icon, Typography } from "@mui/material"
 import { green } from "@mui/material/colors"
+import styles from './singup.module.css'
 
 function Signup() {
 
@@ -26,12 +27,35 @@ function Signup() {
                 <span style={{}}></span>
                 <span style={{}}></span>
             </div>
-            <div style={{ height: '300px', padding: '10px' }}>
+            <div style={{ height: '400px', padding: '10px' }}>
                 <Typography  variant="h5" sx={{textAlign:'center', color: 'brown'}}> Sign Up </Typography>
 
-                
-            </div>
+                <form>
+                <div className="form-group">
+                    <label for="exampleInputEmail1">username</label>
+                    <input type="email" className="form-control" id="exampleInputEmail1" placeholder=" Email" />
+                    
+                </div>
+                <div className="form-group">
+                    <label for="exampleInputEmail1">Email</label>
+                    <input type="password" className="form-control" id="passwordInputEmail1"  placeholder="Password" />
+                </div>
+                <div className="form-group">
+                    <label for="exampleInputEmail1">Password</label>
+                    <input type="password" className="form-control" id="passwordInputEmail1"  placeholder="Password" />
+                </div>
+                <div className="form-group">
+                    <label for="exampleInputEmail1">Confirm Password</label>
+                    <input type="password" className="form-control" id="passwordInputEmail1"  placeholder="Password" />
+                </div>
+                <div classNameName="form-group" style={{position:'relative',top:'30px',left:'200px'}}>
+                    <button type="submit" className={`btn ${styles.btnbrown}`}>Register</button>
+                    <button type="submit"  className={`btn ${styles.lightBlue}`}>Login</button>
+                </div>
+            </form>
 
+            </div>
+            
 
 
 
