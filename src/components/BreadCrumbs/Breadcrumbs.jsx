@@ -3,7 +3,6 @@ import Typography from '@mui/material/Typography';
 import Breadcrumbs from '@mui/material/Breadcrumbs';
 import Link from '@mui/material/Link'
 import { useLocation, useParams } from 'react-router-dom';
-import { Link as RouterLink } from 'react-router-dom'
 
 function BreadCrumb(){
 
@@ -16,7 +15,9 @@ function BreadCrumb(){
             setCrumbtext('Signup Page')
         else if(location.pathname == '/signIn')
             setCrumbtext('Login Page')
-        else if(location.pathname == '/notes' || location.pathname == '/home' || location.pathname == '/')
+        else if( location.pathname == '/home')
+            setCrumbtext('')
+        else if(location.pathname == '/notes'  || location.pathname == '/')
             setCrumbtext('Your Notes')
 
     })

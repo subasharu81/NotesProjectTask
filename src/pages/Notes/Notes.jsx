@@ -66,6 +66,34 @@ function Notes() {
       </Modal>
     </React.Fragment>
 
+      <Box
+        sx ={{
+           border:'2px solid brown',
+           width:'45%'
+        }}
+      > 
+          <div style={{
+            border:'2px solid brown',
+            color:'brown',
+            backgroundColor:'#f9d188',
+            paddingLeft:'20px'
+
+          }}> 
+              <h5>Test</h5>
+          </div>
+          <div style={{height:'300px',backgroundColor:'white',padding:'10px' }}>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Aliquid deserunt unde corrupti aut eius aspernatur cum ut? Fuga, eos, vero praesentium vel delectus quam vitae aperiam quidem quos perspiciatis earum!
+            <Typography sx ={{position:'relative',left:'220px', top:'170px'}}>
+               Last Modified Sun, 08 sep 2024 
+            </Typography>
+          </div>
+
+          
+          
+        
+
+      </Box>
+
   </div>
 }
 
