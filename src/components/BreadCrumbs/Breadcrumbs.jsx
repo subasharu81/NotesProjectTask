@@ -5,9 +5,6 @@ import Link from '@mui/material/Link'
 import { useLocation, useParams } from 'react-router-dom';
 import { Link as RouterLink } from 'react-router-dom'
 
-
-
-
 function BreadCrumb(){
 
     const [crumbText,setCrumbtext] = React.useState('home')
@@ -21,7 +18,6 @@ function BreadCrumb(){
             setCrumbtext('Login Page')
         else if(location.pathname == '/notes' || location.pathname == '/home' || location.pathname == '/')
             setCrumbtext('Your Notes')
-        
 
     })
     return <div>
