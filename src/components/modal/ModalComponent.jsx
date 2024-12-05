@@ -23,6 +23,7 @@ function ModalComponent( {formType} ) {
         event.preventDefault()
         notesForm.lastModified =new Date()
         localStorage.setItem('notesForm',JSON.stringify(notesForm))
+        setOpen(false)
     }
 
 
