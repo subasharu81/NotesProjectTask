@@ -5,6 +5,7 @@ import { useEffect,useState } from "react"
 
 
 function NotesView(){
+    
     const [notesEditForm,setNotesEditForm] = useState(false)
     const getNotes = JSON.parse(localStorage.getItem('notesForm'))
      

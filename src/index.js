@@ -22,7 +22,7 @@ function Index(){
       <BreadCrumb />
       <Routes>
           <Route 
-              index element={<Home/>}
+              index element={<Signup/>}
            />  
           <Route 
             path='signIn' element={<SignIn/>}

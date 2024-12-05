@@ -1,8 +1,39 @@
 import { Box, Icon, Typography } from "@mui/material"
 import { green } from "@mui/material/colors"
 import styles from './singup.module.css'
+import { useState } from "react"
+import axios from "axios"
+import { useNavigate } from "react-router-dom"
 
 function Signup() {
+
+    const [signUpForm,setSignUp] = useState({})
+    const navigate = useNavigate()
+
+    const handleChange = (event) => {
+        const name = event.target.name
+        const value = event.target.value
+
+        setSignUp({...signUpForm,[name]:value})
+    }
+    const handleSubmit = async (event)=>{
+
+       event.preventDefault()
+       
+       let payload = {
+        email : signUpForm.email,
+        password: signUpForm.password
+       }
+
+       let response = await axios.post('https://reqres.in/api/register',payload)
+       let token = await response.data
+
+       if(token !=null){
+            navigate('/login')
+       }
+
+    }
+
 
     return <div>
         <Box
@@ -33,20 +64,46 @@ function Signup() {
                 <form>
                 <div className="form-group">
                     <label for="exampleInputEmail1">username</label>
-                    <input type="email" className="form-control" id="exampleInputEmail1" placeholder=" Email" />
+                    <input 
+                        type="email" 
+                        className="form-control"
+                         id="exampleInputEmail1" 
+                         placeholder=" Email" 
+                         name ='username'
+                    />
                     
                 </div>
                 <div className="form-group">
                     <label for="exampleInputEmail1">Email</label>
-                    <input type="password" className="form-control" id="passwordInputEmail1"  placeholder="Password" />
+                    <input 
+                        type="password" 
+                        className="form-control" 
+                        id="passwordInputEmail1"  
+                        placeholder="Password"
+                        name='email'
+                    />
                 </div>
                 <div className="form-group">
                     <label for="exampleInputEmail1">Password</label>
-                    <input type="password" className="form-control" id="passwordInputEmail1"  placeholder="Password" />
+                    <input 
+                        type="password" 
+                        className="form-control" 
+                        id="passwordInputEmail1"  
+                        placeholder="Password" 
+                        name ='password'
+
+                    />
                 </div>
                 <div className="form-group">
                     <label for="exampleInputEmail1">Confirm Password</label>
-                    <input type="password" className="form-control" id="passwordInputEmail1"  placeholder="Password" />
+                    <input 
+                        type="password" 
+                        className="form-control" 
+                        id="passwordInputEmail1" 
+                        placeholder="Password" 
+                         name ='confirmpassword'
+                        
+                        />
                 </div>
                 <div classNameName="form-group" style={{position:'relative',top:'30px',left:'200px'}}>
                     <button type="submit" className={`btn ${styles.btnbrown}`}>Register</button>
