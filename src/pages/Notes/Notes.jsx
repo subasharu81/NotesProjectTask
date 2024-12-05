@@ -30,10 +30,17 @@ function Notes() {
       >
         <Sheet
           variant="outlined"
-          sx={{ maxWidth: 800, borderRadius: 'md', p: 5, boxShadow: 'lg' }}
+          sx={{ 
+              maxWidth: 800, 
+              borderRadius: 'md', 
+              p: 5, 
+              boxShadow: 'lg',
+              backgroundColor:'lightyellow'
+            }}
         >
+          
+          <Box sx={{display:'flex'}}>
           <ModalClose variant="plain" sx={{ m: 1 }} />
-          <Box >
             <Typography
               component="h2"
               id="modal-title"
@@ -44,23 +51,27 @@ function Notes() {
               Add Notes
             </Typography>
           </Box>
-          <form>
-            <div className="form-control">
-              <input type='text' />
-            </div>
-            <div className="form-control ">
-              <textarea
-                row={50}
-                col={50}
-              ></textarea>
-            </div>
-            <div className={`${styles.formBtn}`}>
-              <input type='submit' value='Add' className={`${styles.addBtn}`} />&nbsp;&nbsp;
-              <button
-                className={`${styles.cancel}`}
-              > Cancel</button>
-            </div>
-          </form>
+            <form>
+                  <div className="form-group">
+                      <input type="text" className="form-control" id="exampleInputEmail1" placeholder=" title" />
+                      
+                  </div>
+                  <div className="form-group">
+                      
+                      <textarea 
+                        className="form-control" 
+                        id="passwordInputEmail1"  
+                        placeholder="Password" 
+                        rows ={10}
+                        cols = {5}
+                        
+                        ></textarea>
+                  </div>
+                  <div classNameName="form-group" style={{position:'relative',top:'30px',left:'80px'}}>
+                      <button type="submit" className={`btn btn-success`}>Add</button>
+                      <button type="submit"  className={`btn btn-danger`} style={{position:'relative',left:'20px'}}> Cancel</button>
+                  </div>
+              </form>
 
         </Sheet>
       </Modal>

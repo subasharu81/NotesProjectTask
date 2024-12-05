@@ -23,3 +23,18 @@
 .textarea{
     
 }
+
+.btn{
+    background-color: #f9d188;
+    padding: 8px;
+   
+}
+.lightBlue{
+    background-color:#8fc8f5;
+    padding: 8px;
+    position: relative;
+    left:20px
+}
+form{
+    padding:20px
+}

@@ -36,7 +36,7 @@ function SignIn(){
                     
                 </div>
                 <div className="form-group">
-                    <label for="exampleInputEmail1">Email address</label>
+                    <label for="exampleInputEmail1">Password</label>
                     <input type="password" className="form-control" id="passwordInputEmail1"  placeholder="Password" />
                 </div>
                 <div classNameName="form-group" style={{position:'relative',top:'30px',left:'200px'}}>
