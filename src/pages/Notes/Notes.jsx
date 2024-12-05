@@ -6,15 +6,20 @@ import Typography from '@mui/joy/Typography';
 import Sheet from '@mui/joy/Sheet';
 import styles from './notes.module.css'
 import { Box } from '@mui/material';
+import ModalComponent from '../../components/modal/ModalComponent';
 
 
 
 function Notes() {
   const [open, setOpen] = React.useState(true);
+  const [notesForm,setnotesform] =React.useState({})
+
+
+  
 
   return <div className={`${styles.modalDesign}`}>
     <React.Fragment>
-
+{/* 
       <Modal
         aria-labelledby="modal-title"
         aria-describedby="modal-desc"
@@ -74,7 +79,8 @@ function Notes() {
               </form>
 
         </Sheet>
-      </Modal>
+      </Modal> */}
+      <ModalComponent />
     </React.Fragment>
 
       <Box
