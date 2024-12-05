@@ -10,6 +10,7 @@ import Notes from './pages/Notes/Notes';
 import { BrowserRouter, Route, Routes } from 'react-router-dom';
 import SignIn from './pages/SignIn/SignIn';
 import Signup from './pages/Singup/Singup';
+import BreadCrumb from './components/BreadCrumbs/Breadcrumbs';
 
 
 
@@ -18,6 +19,7 @@ function Index(){
   return <div >
     <BrowserRouter>
     <Header/>
+      <BreadCrumb />
       <Routes>
           <Route 
               index element={<Home/>}

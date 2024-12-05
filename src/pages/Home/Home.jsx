@@ -7,12 +7,12 @@ function Home() {
     console.log('home page')
     return <div>
         <div role="presentation" >
-            <Breadcrumbs aria-label="breadcrumb">
+            {/* <Breadcrumbs aria-label="breadcrumb">
                 <Link underline="hover" color="inherit" href="/">
                     Homepage
                 </Link>
                 <Typography sx={{ color: 'text.primary' }}>Your Notes</Typography>
-            </Breadcrumbs>
+            </Breadcrumbs> */}
         </div>
     </div>
 }

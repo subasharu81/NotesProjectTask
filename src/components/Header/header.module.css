@@ -22,3 +22,6 @@ ul{
 .logoText{
     width: 80%;
 }
+Link{
+    text-decoration: none;
+}
